@@ -1,99 +1,79 @@
 # CAD and Airframe Design – Cessna 172 Wing Optimisation
 
-## Overview
-This project presents a combined CAD, CFD, and FEA-based optimisation study of a Cessna 172 aircraft wing. The work focuses on aerodynamic load prediction, structural stress analysis, and mass minimisation through a fully integrated computational workflow.
+## Project Description
+This repository contains a complete **CAD-based aerodynamic and structural optimisation study** of a **Cessna 172 wing**, using an integrated **CFD–FEA workflow**. The project demonstrates a realistic aerospace engineering process, achieving a **42% reduction in wing structural mass** while maintaining stresses within allowable limits.
 
-The study is motivated by aerospace structural design requirements, where weight reduction, structural integrity, and manufacturability are critical for aircraft performance and efficiency.
+---
 
+## Key Features
 
-## Objectives
-- Develop a fully parametric CAD model of the Cessna 172 wing
-- Compute realistic aerodynamic loads using CFD
-- Apply CFD-derived loads to structural FEA
-- Perform gradient-based structural optimisation
-- Minimise wing mass while maintaining allowable stress limits
-- Validate aerodynamic and structural results against reference data
+### Parametric CAD Model
+- Fully parameterised Cessna 172 wing developed in **CATIA V5**
+- Suitable for automated optimisation workflows
 
+### CFD–FEA Integration
+- Aerodynamic loads obtained from CFD simulations
+- Loads directly transferred to the structural model for analysis
 
-## Geometry
-- Aircraft wing: Cessna 172
-- Fully parameterised wing geometry developed in CATIA V5
-- Key structural components modelled:
-  - Spars
-  - Skin
-  - Ribs
-- Geometry designed to support automated optimisation loops
-- Manufacturing and design feasibility considered in parameter limits
+### Structural Optimisation
+- Gradient-based optimisation methodology
+- Objective: minimise wing mass subject to stress and design constraints
 
+### Manufacturing Constraints
+- Design variables bounded to ensure realistic and manufacturable geometry
 
-## Computational Setup
-### Aerodynamic Analysis
-- CFD solver: ANSYS Fluent
-- Purpose: Aerodynamic load prediction
-- Output:
-  - Pressure distribution
-  - Spanwise wing loading
-- Aerodynamic loads extracted for structural application
+### Validation
+- Aerodynamic loading validated against handbook data
+- Results consistent with classical aerospace engineering theory
 
-### Structural Analysis
-- FEA environment: CATIA Generative Structural Analysis
-- Analysis type: Linear static structural analysis
-- Boundary conditions derived from CFD loading
-- Stress constraints defined using material allowable limits
+---
 
+## Technical Details
 
-## Optimisation Methodology
-- Optimisation type: Gradient-based optimisation
-- Objective function: Minimise wing structural mass
-- Constraints:
-  - Maximum stress below allowable limits
-  - Geometric feasibility
-- Manufacturing practicality
-- Fully integrated CAD → CFD → FEA workflow
+### Software Used
+- CATIA V5  
+- ANSYS Fluent  
+- CATIA Generative Structural Analysis  
 
+### Methodology
+- Parametric CAD modelling  
+- CFD-based aerodynamic load prediction  
+- Structural FEA under realistic loading conditions  
+- Gradient-based mass optimisation  
 
-## Results
-Key aerodynamic results from the fine mesh case:
-- Downforce coefficient shows stable convergence
-- Drag coefficient converges smoothly after initial transients
-- Pitching moment dominated by pressure contribution
-- Viscous contributions to pitching moment are negligible
+---
 
-Force and moment histories demonstrate stable steady-state behaviour.
+## Key Results
+- **Mass reduction:** 154.2 kg → 89.4 kg (≈ 42%)  
+- **Maximum stresses:** Below allowable limits  
+- **Wing loading accuracy:** Within 5% of reference data  
 
+---
 
+## Repository Contents
+- 📄 Complete project report (PDF)  
+- 🛠️ Methodology and workflow documentation  
+- 📊 Results analysis and discussion  
+- 🖼️ Figures and schematic representations  
+- 📚 References and academic sources  
 
-## Flow Physics
-- Strong suction peaks on the lower surfaces of the elements
-- Endplate and junction flows contribute significantly to drag
-- Q-criterion visualisation highlights coherent vortex structures
-- Ground effect accelerates flow beneath the wing, increasing downforce
+---
 
+## Skills Demonstrated
+- Aerospace Structural Analysis  
+- Computational Fluid Dynamics (CFD)  
+- Finite Element Analysis (FEA)  
+- Parametric CAD Design  
+- Structural Optimisation  
+- Engineering Simulation Workflows  
+- Technical Report Writing  
 
+---
 
-## Current Limitations
-- CAD surface quality limits mesh scalability
-- Full-wing simulations are computationally expensive
-- Some small non-manifold features remain in the geometry
+## Academic Context
+This project was completed as part of the **MSc in Aerospace Computational Engineering**  
+at **Cranfield University – School of Aerospace, Transport and Manufacturing**.
 
-
-
-## Planned Work
-- CAD cleanup and removal of non-aerodynamic features
-- Half-wing symmetry simulations
-- Parametric study of pitch angle
-- Parametric study of ride height
-- Cl/Cd trends versus pitch angle and ride height
-- Improved mesh independence study
-- Further flow structure analysis using Q-criterion
-
-
-
-## Tools
-- OpenFOAM
-- ParaView
-- MATLAB/Python/C++ (post-processing)
-- FreeCAD / SALOME (planned CAD repair)
 
 
 
