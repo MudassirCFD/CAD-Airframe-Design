@@ -1,4 +1,4 @@
-# CAD and Airframe Design – Cessna 172 Wing Optimisation
+# CAD and Airframe Design – Cessna 172 Wing Optimisation - 2024
 
 ## Project Description
 This repository contains a complete **CAD-based aerodynamic and structural optimisation study** of a **Cessna 172 wing**, using an integrated **CFD–FEA workflow**. The project demonstrates a realistic aerospace engineering process, achieving a **42% reduction in wing structural mass** while maintaining stresses within allowable limits.
