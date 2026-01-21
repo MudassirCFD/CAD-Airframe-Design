@@ -14,6 +14,7 @@ The study is motivated by aerospace structural design requirements, where weight
 - Minimise wing mass while maintaining allowable stress limits
 - Validate aerodynamic and structural results against reference data
 
+
 ## Geometry
 - Aircraft wing: Cessna 172
 - Fully parameterised wing geometry developed in CATIA V5
@@ -24,8 +25,9 @@ The study is motivated by aerospace structural design requirements, where weight
 - Geometry designed to support automated optimisation loops
 - Manufacturing and design feasibility considered in parameter limits
 
+
 ## Computational Setup
-# Aerodynamic Analysis
+### Aerodynamic Analysis
 - CFD solver: ANSYS Fluent
 - Purpose: Aerodynamic load prediction
 - Output:
@@ -33,20 +35,21 @@ The study is motivated by aerospace structural design requirements, where weight
   - Spanwise wing loading
 - Aerodynamic loads extracted for structural application
 
-# Structural Analysis
+### Structural Analysis
 - FEA environment: CATIA Generative Structural Analysis
 - Analysis type: Linear static structural analysis
 - Boundary conditions derived from CFD loading
 - Stress constraints defined using material allowable limits
-- 
-## Optimisation Methodology
-- Hex-dominant mesh generated using snappyHexMesh
-- Boundary layer refinement with near-wall resolution suitable for SST
-- Mesh sensitivity study performed:
-  - Fine mesh: ~8 million cells
-  - Acceptable mesh quality with minimal illegal cells
-- Coarse mesh (>1.6 million cells) showed degraded mesh quality due to CAD issues
 
+
+## Optimisation Methodology
+- Optimisation type: Gradient-based optimisation
+- Objective function: Minimise wing structural mass
+- Constraints:
+  - Maximum stress below allowable limits
+  - Geometric feasibility
+- Manufacturing practicality
+- Fully integrated CAD → CFD → FEA workflow
 
 
 ## Results
